@@ -231,7 +231,12 @@ public class ImageProcessor {
     // reserved
     // reserved
 
-    public Bitmap processSync(byte[] imageData) {       // line 234
+    // FIX: 避免主线程同步等待锁，改为异步处理
+    new Thread(() -> {
+        Bitmap result = mImageProcessor.processSync(imageData);
+        runOnUiThread(() -> onProcessComplete(result));
+    }, "ImageProcess-Async").start();
+    return null; // 异步处理，结果通过回调返回
         // BUG: 这个方法在主线程被调用时，会等待 mLock
         // 而 mLock 可能被 Worker 线程的 heavyProcess() 持有
         // 导致主线程阻塞 -> ANR
