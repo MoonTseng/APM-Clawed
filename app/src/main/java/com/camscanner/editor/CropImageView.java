@@ -200,6 +200,10 @@ public class CropImageView extends View {
     public void updateCropRect(float left, float top, float right, float bottom) {
         // BUG: 未检查 mBitmap 是否为 null
         float maxW = mBitmap.getWidth() * mScaleFactor;   // line 203: also crashes
+        if (mBitmap == null) {
+            Log.w(TAG, "mBitmap is null");
+            return;
+        }
         float maxH = mBitmap.getHeight() * mScaleFactor;
         mCropRect.set(
             Math.max(mOffsetX, left),
