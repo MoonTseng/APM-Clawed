@@ -1,0 +1,18 @@
+# CODEOWNERS for APM-Clawed
+# 格式: <path_pattern> <owner>
+
+# Editor 模块
+app/src/main/java/com/camscanner/editor/*   zhangsan@camscanner.com
+
+# Document 列表
+app/src/main/java/com/camscanner/doc/*      lisi@camscanner.com
+
+# Scanner & Camera
+app/src/main/java/com/camscanner/scanner/*  wangwu@camscanner.com
+app/src/main/java/com/camscanner/camera/*   wangwu@camscanner.com
+
+# OCR 引擎
+app/src/main/java/com/camscanner/ocr/*      zhaoliu@camscanner.com
+
+# 云同步
+app/src/main/java/com/camscanner/sync/*     sunqi@camscanner.com
