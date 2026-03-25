@@ -1,0 +1,22 @@
+[
+  {
+    "className": "com.bytedance.apm.pluginx.ApmPlugin",
+    "name": "ApmPlugin",
+    "applyTime": 1774346452706,
+    "appliedTime": 1774346452706,
+    "enable": true,
+    "enableInDebug": true,
+    "alone": false,
+    "isRunningAlone": true,
+    "started": true,
+    "startTime": 1774346452796,
+    "runTaskName": ":app:transformClassesWithApmPluginForDebug",
+    "runTransformClassName": "com.ss.android.ugc.bytex.common.SimpleTransform",
+    "runTransformUnique": "ApmPlugin",
+    "runTransformFLow": "MainTransformFlow-0",
+    "finished": true,
+    "finishTime": 1774346452797,
+    "runSucceed": false,
+    "runFailMessage": ""
+  }
+]
